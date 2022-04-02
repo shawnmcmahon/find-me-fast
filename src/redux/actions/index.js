@@ -25,7 +25,7 @@ export const addStop = (routeId, stopId) => {
     };
 }
 
-export const deleteStop = (stopId, routeId) => {
+export const deleteStop = (routeId, stopId) => {
     return {
         type: 'DELETE_STOP', 
         routeId,

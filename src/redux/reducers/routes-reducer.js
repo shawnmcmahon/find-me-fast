@@ -3,11 +3,11 @@ const routes = (state = [], action) => {
         case 'ADD_ROUTE':
             return [...state, {routeId: action.routeId}]
         case 'DELETE_ROUTE': 
-            return state.map((route, index) => {
-                if (route.routeId !== action.routId) {
+            return state.routes.map((route, index) => {
+                if (route.routeId !== action.routeId) {
                     return route
                 }
-                state.splice(index, 1); 
+                state.routes.splice(index, 1); 
                 return state;
             })
         default: 
