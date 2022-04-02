@@ -1,4 +1,0 @@
-// State: 'allRoutes', actions: "ADD_ROUTE" 
-// State: 'allRoutes', actions: "DELETE_ROUTE"
-// State: 'singleRoute': action: "ADD_STOP" 
-// State: 'singleRoute': action: "DELETE_STOP" 
