@@ -16,18 +16,18 @@ export const deleteRoute = (routeId) => {
     };
 };
 
-export const ADD_STOP = (stopId, routeId) => {
+export const addStop = (routeId, stopId) => {
     return {
         type: 'ADD_STOP', 
-        stopId,
-        routeId
+        routeId, 
+        stopId
     };
 }
 
-export const DELETE_STOP = (stopId, routeId) => {
+export const deleteStop = (stopId, routeId) => {
     return {
         type: 'DELETE_STOP', 
-        stopId, 
-        routeId
+        routeId,
+        stopId
     };
 };
