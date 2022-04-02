@@ -19,8 +19,9 @@ export const deleteRoute = (routeId) => {
 export const addStop = (routeId, stopId) => {
     return {
         type: 'ADD_STOP', 
-        routeId, 
+        routeId,   
         stopId
+        
     };
 }
 
