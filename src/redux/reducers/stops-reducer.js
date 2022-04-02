@@ -11,7 +11,8 @@ const stops = (state = [], action) => {
                 if (stop.stopId !== action.stopId) {
                   return stop
                 }
-                state.routes.stop.splice(stopIndex, 1)
+                // Not sure if it's stops or stop here
+                state.routes.stops.splice(stopIndex, 1)
                 return state;
               })
           })
@@ -20,4 +21,4 @@ const stops = (state = [], action) => {
   }       
 };
 
-export default stops;
+// export default stops;
