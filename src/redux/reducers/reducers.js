@@ -35,7 +35,7 @@ export const stopsReducer = (state = initialState, action) => {
                 if (stop.stopId !== action.stopId) {
                   return stop
                 }
-                // Not sure if it's stops or stop here
+                // Not sure if splice is what I need to remove the stop from the route
                 route.stops.splice(stopIndex, 1)
                 return state;
               })

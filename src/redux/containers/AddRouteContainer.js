@@ -8,6 +8,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
+    // this handleSubmit is what is being expected to be return from the component it belongs to
     handleSumbit: (routeId) => {
       dispatch(addRoute(routeId))
     }
