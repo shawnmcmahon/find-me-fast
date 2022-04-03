@@ -33,7 +33,7 @@ export const stopsReducer = (state = initialState, action) => {
                   return stop
                 }
                 // Not sure if it's stops or stop here
-                state.routes.stops.splice(stopIndex, 1)
+                route.stops.splice(stopIndex, 1)
                 return state;
               })
               return routeWithDeletedStop;
