@@ -15,4 +15,4 @@ const routes = (state = [], action) => {
     }       
 };
 
-// export default routes;
+export default routes;

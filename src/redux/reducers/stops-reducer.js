@@ -21,4 +21,4 @@ const stops = (state = [], action) => {
   }       
 };
 
-// export default stops;
+export default stops;
