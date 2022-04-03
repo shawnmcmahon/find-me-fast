@@ -1,6 +1,9 @@
 const initialState = {
-  routes: []
+  routes: [], 
+  isLoading: false, 
+  error: ''
 }
+
 
 export const routesReducer = (state = initialState, action) => {
   switch(action.type) {
