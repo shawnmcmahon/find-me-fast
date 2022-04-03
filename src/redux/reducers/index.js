@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
-import routesReducer from './routes-reducer';
-import stopsReducer from './stops-reducer'; 
+import { routesReducer, stopsReducer }  from './reducers';
 
-const rootReducer = combineReducers({
+export const rootReducer = combineReducers({
   routesReducer, 
   stopsReducer
 })
 
-export default rootReducer;
