@@ -3,7 +3,6 @@
 // State: 'singleRoute': action: "ADD_STOP" 
 // State: 'singleRoute': action: "DELETE_STOP" 
 
-
 export const addRoute = (routeId) => {
     return {
         type: 'ADD_ROUTE', 

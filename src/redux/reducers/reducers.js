@@ -1,5 +1,5 @@
 const initialState = {
-  routes: [], 
+  routes: [{routeId: 1}, {routeId: 2}], 
   isLoading: false, 
   error: ''
 }
