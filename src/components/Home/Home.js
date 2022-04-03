@@ -7,6 +7,6 @@ export default function Home() {
   });
 
   return (
-    <div className='className="text-3xl font-bold underline"'>Home components</div>
+    <div className="text-3xl font-bold underline">Home components???????????????</div>
   )
 }

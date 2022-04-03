@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
@@ -10,12 +10,12 @@ import {
 } from "react-router-dom";
 
 import { Provider } from 'react-redux';
-import { createStore } from 'redux'
-import { rootReducer } from './redux/reducers/index'
+import { createStore } from 'redux';
+import { rootReducer } from './redux/reducers/index';
 
-import Home from '../src/components/Home/Home'
+import Home from '../src/components/Home/Home';
+import Error from '../src/components/Error/Error';
 
-import { createRoot } from 'react-dom/client';
 
 
 const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
@@ -32,22 +32,21 @@ function AppWithCallbackAfterRender() {
 
   return  (
     <React.StrictMode>
-    <BrowserRouter>
-      <Provider store={ store }>
-        <Routes> 
-          <Route path="/" element={<App />}>
-            <Route index element={<Home />} >
-            </Route>
-          </Route>
-        </Routes>
-      </Provider>
-    </BrowserRouter>
-  </React.StrictMode>  
+      <BrowserRouter>
+        <Provider store={ store }>
+          <Routes> 
+            <Route path="/" element={<App />} />
+              <Route index element={<Home />} />
+            <Route path="*" element={<Error />} />
+          </Routes>
+        </Provider>
+      </BrowserRouter>
+    </React.StrictMode>  
   )
 }
 
 const container = document.getElementById('root');
-const root = ReactDOM.createRoot(container);
+const root = createRoot(container);
 root.render(
   <AppWithCallbackAfterRender />
 );
