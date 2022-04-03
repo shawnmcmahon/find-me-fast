@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { useEffect } from 'react';
+import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
@@ -13,6 +13,11 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux'
 import { rootReducer } from './redux/reducers/index'
 
+import Home from '../src/components/Home/Home'
+
+import { createRoot } from 'react-dom/client';
+
+
 const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 
 const store = createStore(
@@ -20,19 +25,51 @@ const store = createStore(
   devTools
 );
 
-ReactDOM.render(
-  <React.StrictMode>
+function AppWithCallbackAfterRender() {
+  useEffect(() => {
+    console.log('rendered');
+  });
+
+  return  (
+    <React.StrictMode>
     <BrowserRouter>
       <Provider store={ store }>
-        <Route path="/" element={<App />}>
-          <Route index element={<Home />} >
+        <Routes> 
+          <Route path="/" element={<App />}>
+            <Route index element={<Home />} >
+            </Route>
           </Route>
-        </Route>
+        </Routes>
       </Provider>
     </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>  
+  )
+}
+
+const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container);
+root.render(
+  <AppWithCallbackAfterRender />
 );
+
+
+// Pre React Router v18 logic 
+
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <BrowserRouter>
+//       <Provider store={ store }>
+//         <Routes> 
+//           <Route path="/" element={<App />}>
+//             <Route index element={<Home />} >
+//             </Route>
+//           </Route>
+//         </Routes>
+//       </Provider>
+//     </BrowserRouter>
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
