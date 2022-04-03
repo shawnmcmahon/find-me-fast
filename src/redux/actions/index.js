@@ -1,10 +1,9 @@
 // State: 'allRoutes', actions: "ADD_ROUTE" 
 // State: 'allRoutes', actions: "DELETE_ROUTE"
 // State: 'singleRoute': action: "ADD_STOP" 
-
-import { type } from "@testing-library/user-event/dist/type";
-
 // State: 'singleRoute': action: "DELETE_STOP" 
+
+
 export const addRoute = (routeId) => {
     return {
         type: 'ADD_ROUTE', 
