@@ -51,7 +51,6 @@ root.render(
   <AppWithCallbackAfterRender />
 );
 
-
 // Pre React Router v18 logic 
 
 // ReactDOM.render(
