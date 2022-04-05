@@ -24,7 +24,7 @@ function Home(props)  {
 
   return (
       <div className="text-3xl font-bold underline">
-        Home components???????????????
+        Home components
         <form id="routeId">
           <label>Add Route</label>
           <input type="text" id="routeId" placeholder="route-id"></input>
