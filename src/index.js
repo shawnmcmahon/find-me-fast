@@ -11,7 +11,7 @@ import {
 
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import { rootReducer } from './redux/reducers/index';
+// import { rootReducer } from './redux/reducers/index';
 
 import Home from '../src/components/Home/Home';
 import Error from '../src/components/Error/Error';
@@ -21,7 +21,6 @@ import Error from '../src/components/Error/Error';
 const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 
 const store = createStore(
-  rootReducer, 
   devTools
 );
 
