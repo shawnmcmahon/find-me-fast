@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 // import { addRoute } from '../../redux/actions/index';
 // import VisibleRouteList from '../../redux/containers/VisibleRouteList';
 import AddRoute from '../../redux/containers/AddRoute'; 
+import VisibleRouteList from '../../redux/containers/VisibleRouteList';
 
 
 function Home(props)  {
@@ -26,6 +27,7 @@ function Home(props)  {
       <div className="text-3xl font-bold underline">
         Home components
         <AddRoute />
+        <VisibleRouteList />
       </div>
   )
 }

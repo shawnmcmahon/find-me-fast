@@ -1,10 +1,10 @@
 import React from 'react'
-import Todo from './Todo'
+import Route from './Route'
 
 const RouteList = ({ routes, toggleRoute }) => (
   <ul>
-    {todos.map(route =>
-      <Todo
+    {routes.map(route =>
+      <Route
         key={route.id}
         {...route}
         onClick={() => toggleRoute(route.id)}
@@ -15,4 +15,4 @@ const RouteList = ({ routes, toggleRoute }) => (
 
 
 
-export default TodoList
+export default RouteList
