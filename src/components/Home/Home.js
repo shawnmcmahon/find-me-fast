@@ -8,6 +8,7 @@ import { connect } from 'react-redux';
 // import VisibleRouteList from '../../redux/containers/VisibleRouteList';
 import AddRoute from '../../redux/containers/AddRoute'; 
 import VisibleRouteList from '../../redux/containers/VisibleRouteList';
+import Footer from '../../redux/components/Footer';
 
 
 function Home(props)  {
@@ -28,6 +29,7 @@ function Home(props)  {
         Home components
         <AddRoute />
         <VisibleRouteList />
+        <Footer />
       </div>
   )
 }

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { toggleRoute } from '../actions'
 import RouteList from '../components/RouteList'
-import { VisibilityFilters } from '../actions'
+import { VisibilityFilters } from '../actions/index'
 
 const getVisibleRoutes = (routes, filter) => {
   switch (filter) {

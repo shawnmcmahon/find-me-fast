@@ -2,7 +2,7 @@ let nextRouteId = 0;
 
 export const addRoute = text => ({
   type: 'ADD_ROUTE',
-  routeId: nextRouteId++,
+  id: nextRouteId++,
   text
 })
 
@@ -11,9 +11,9 @@ export const setVisibilityFilter = filter => ({
   filter
 })
 
-export const toggleRoute = routeId => ({
+export const toggleRoute = id => ({
   type: 'TOGGLE_ROUTE',
-  routeId
+  id
 })
 
 export const VisibilityFilters = {
