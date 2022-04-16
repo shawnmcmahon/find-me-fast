@@ -11,7 +11,7 @@ export const setVisibilityFilter = filter => ({
   filter
 })
 
-export const toggleTodo = routeId => ({
+export const toggleRoute = routeId => ({
   type: 'TOGGLE_ROUTE',
   routeId
 })
