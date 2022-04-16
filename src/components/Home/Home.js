@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import AddRoute from '../../redux/components/AddRoute'; 
 import { connect } from 'react-redux'; 
 import { addRoute } from '../../redux/actions/index';
+import VisibleRouteList from '../../redux/containers/VisibleRouteList';
 
 
 function Home(props)  {
@@ -29,6 +30,7 @@ function Home(props)  {
           <label>Add Route</label>
           <input type="text" id="routeId" placeholder="route-id"></input>
           <button type="submit" form="routeId"></button>
+          <VisibleRouteList />
         </form>
       </div>
   )

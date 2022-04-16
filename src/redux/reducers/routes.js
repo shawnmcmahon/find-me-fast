@@ -1,12 +1,16 @@
 import undoable from 'redu-undo'; 
 
-const initialState = {
+const state = {
   routes: [{routeId: 1}, {routeId: 2}], 
   isLoading: false, 
   error: ''
 };
 
-const routes = (state, action) => {
+const routes = (state = {
+  routes: [{routeId: 1}, {routeId: 2}], 
+  isLoading: false, 
+  error: ''
+}, action) => {
   switch (action.type) {
     case 'ADD_ROUTE':
           return [...state, {routeId: action.routeId}]

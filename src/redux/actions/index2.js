@@ -1,17 +1,17 @@
-let nextRouteId = 0; 
+let routeId = 0; 
 
-export const addRoute = text = ({
+export const addRoute = (routeId) = ({
   type: 'ADD_ROUTE', 
-  routeId: nextRouteId++, 
+  routeId: routeId++, 
 })
 
 
-export const deleteRoute = text = ({
+export const deleteRoute = (routeId) = ({
   type: 'DELETE_ROUTE', 
   routeId, 
 })
 
-export const toggleRoute = id => ({
+export const toggleRoute = (routeId) => ({
   type: 'TOGGLE_ROUTES', 
   routeId
 })
