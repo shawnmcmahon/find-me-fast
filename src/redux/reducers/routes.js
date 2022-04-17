@@ -20,4 +20,4 @@ const routes = (state = [], action) => {
   }
 }
 
-export default todos
+export default routes;
