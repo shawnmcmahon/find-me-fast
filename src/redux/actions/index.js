@@ -1,51 +1,23 @@
-// State: 'allRoutes', actions: "ADD_ROUTE" 
-// State: 'allRoutes', actions: "DELETE_ROUTE"
-// State: 'singleRoute': action: "ADD_STOP" 
-// State: 'singleRoute': action: "DELETE_STOP" 
+let nextRouteId = 0; 
 
-export const addRoute = (routeId) => {
-    return {
-        type: 'ADD_ROUTE', 
-        routeId
-    };
-};
-
-export const deleteRoute = (routeId) => {
-    return {
-        type: 'DELETE_ROUTE', 
-        routeId
-    };
-};
-
-export const addStop = (routeId, stopId) => {
-    return {
-        type: 'ADD_STOP', 
-        routeId,   
-        stopId
-        
-    };
-}
-
-export const deleteStop = (routeId, stopId) => {
-    return {
-        type: 'DELETE_STOP', 
-        routeId,
-        stopId
-    };
-};
-
-export const isLoading = boolean => ({
-    type: 'IS_LOADING',
-    isLoading: boolean
-});
-
-export const hasErrored = error => ({
-    type: 'HAS_ERRORED',
-    error
-});
-
-export const setRoutes = routes => ({
-    type: 'SET_ROUTES', 
-    routes
+export const addRoute = text => ({
+  type: 'ADD_ROUTE',
+  id: nextRouteId++,
+  text
 })
 
+export const setVisibilityFilter = filter => ({
+  type: 'SET_VISIBILITY_FILTER',
+  filter
+})
+
+export const toggleRoute = id => ({
+  type: 'TOGGLE_ROUTE',
+  id
+})
+
+export const VisibilityFilters = {
+  SHOW_ALL: 'SHOW_ALL',
+  SHOW_COMPLETED: 'SHOW_COMPLETED',
+  SHOW_ACTIVE: 'SHOW_ACTIVE'
+}

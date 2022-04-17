@@ -1,8 +1,8 @@
-import { combineReducers } from 'redux';
-import { routesReducer, stopsReducer }  from './reducers';
+import { combineReducers } from 'redux'
+import routes from './routes'
+import visibilityFilter from './visibilityFilter'
 
-export const rootReducer = combineReducers({
-  routesReducer, 
-  stopsReducer
+export default combineReducers({
+  routes,
+  visibilityFilter
 })
-
