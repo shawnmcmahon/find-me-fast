@@ -24,7 +24,7 @@ const routeSlice = createSlice({
       }; 
     }, 
     addRoute: (state, action) => {
-      const route = action.payload 
+      const route = {routeId: parseInt(action.payload)} 
       state.routes = [...state.routes, route]
     }
   }
@@ -32,8 +32,8 @@ const routeSlice = createSlice({
 
 const { actions, reducer } = routeSlice; 
 
-export const { setLoading, setRoutes } = actions; 
+export const { setLoading, setRoutes, addRoute } = actions; 
 
-export const selectRoutes = (state) => state
+export const selectRoutes = (state) => state.routes.routes
 
 export default reducer; 
