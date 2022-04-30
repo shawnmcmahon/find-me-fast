@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 
 // import AddRoute from '../../redux/components/AddRoute'; 
 import Footer from '../../redux/components/Footer';
+import { Routes } from '../../app/features/routes/Routes';
 
 
 function Home(props)  {
@@ -22,6 +23,7 @@ function Home(props)  {
       <div className="text-3xl font-bold underline">
         Home components
         {/* <VisibleRouteList /> */}
+        <Routes />
         <Footer />
       </div>
   )
