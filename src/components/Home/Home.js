@@ -3,11 +3,6 @@ import { useSelector } from 'react-redux';
 // import AddRouteContainer from '../../redux/containers/AddRouteContainer';
 
 // import AddRoute from '../../redux/components/AddRoute'; 
-import { connect } from 'react-redux'; 
-// import { addRoute } from '../../redux/actions/index';
-// import VisibleRouteList from '../../redux/containers/VisibleRouteList';
-import AddRoute from '../../redux/containers/AddRoute'; 
-import VisibleRouteList from '../../redux/containers/VisibleRouteList';
 import Footer from '../../redux/components/Footer';
 
 
@@ -21,14 +16,12 @@ function Home(props)  {
 
   const data = useSelector((state) => state.routes);
 
-  let routeId;
 
 
   return (
       <div className="text-3xl font-bold underline">
         Home components
-        <AddRoute />
-        <VisibleRouteList />
+        {/* <VisibleRouteList /> */}
         <Footer />
       </div>
   )
@@ -49,7 +42,7 @@ function Home(props)  {
 //   }, 
 // });
 
-export default (Home)
+export default Home;
 // export default Home
 
 

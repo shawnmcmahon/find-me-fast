@@ -1,18 +1,12 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import { addRoute } from '../actions'
 
-const AddRoute = ({ dispatch }) => {
+const AddRoute = () => {
   let input
 
   return (
     <div>
       <form onSubmit={e => {
-        e.preventDefault()
-        if (!input.value.trim()) {
-          return
-        }
-        dispatch(addRoute(input.value))
         input.value = ''
       }}>
         <input ref={node => input = node} />
@@ -24,4 +18,4 @@ const AddRoute = ({ dispatch }) => {
   )
 }
 
-export default connect()(AddRoute)
+export default AddRoute
