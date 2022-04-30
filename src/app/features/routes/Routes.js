@@ -1,9 +1,9 @@
 import React from 'react'; 
 import { useSelector, useDispatch } from 'react-redux';
-import { setRoutes, routeState } from './routeSlice';
+import { setRoutes, selectRoutes } from './routeSlice';
 
 export const Routes = () => {
-  const routes = useSelector((state) => state);
+  const routes = useSelector(selectRoutes);
   const dispatch = useDispatch(); 
   console.log({routes})
 

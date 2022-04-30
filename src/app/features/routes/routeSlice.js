@@ -32,8 +32,8 @@ const routeSlice = createSlice({
 
 const { actions, reducer } = routeSlice; 
 
-export const { setLoading, setRoutes} = actions; 
+export const { setLoading, setRoutes } = actions; 
 
-export const routeState = (state) => state
+export const selectRoutes = (state) => state
 
 export default reducer; 

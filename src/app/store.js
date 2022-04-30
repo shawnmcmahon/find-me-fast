@@ -1,9 +1,9 @@
-import { combinedReducers, configureStore } from '@reduxjs/toolkit';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
 import logger from 'redux-logger';
-import routeReducer from './featrues/routes/routeSlice'; 
+import routeReducer from './features/routes/routeSlice'; 
 
-const rootReducer = combinedReducers({
+const rootReducer = combineReducers({
   routes: routeReducer
 });
 

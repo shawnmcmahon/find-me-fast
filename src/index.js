@@ -9,20 +9,20 @@ import {
   Route,
 } from "react-router-dom";
 
-import { Provider } from 'react-redux';
+import { Provider } from 'react-redux'
 import { createStore } from 'redux';
-// import { rootReducer } from './redux/reducers/index';
 
 import Home from '../src/components/Home/Home';
 import Error from '../src/components/Error/Error';
+import { store } from './app/store';
 
 
 
-const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+// const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 
-const store = createStore(
-  devTools
-);
+// const store = createStore( 
+//   devTools
+// );
 
 function AppWithCallbackAfterRender() {
   useEffect(() => {
