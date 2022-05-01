@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setRoutes, addRoute, selectRoutes } from '../../app/features/routes/routeSlice';
 import { Route } from '../Route/Route';
+import { Link } from 'react-router-dom';
 
 export default function RouteList() {
   const routes = useSelector(selectRoutes);
@@ -9,9 +10,11 @@ export default function RouteList() {
 
   const mapRoutes = routes.map(route => {
     return (
-      <Route 
-        routeId={route.routeId}
-      />
+      <Link name={route.routeId} to={`${route.routeId}`}>
+        <Route 
+          routeId={route.routeId}
+        />
+      </Link>
     )
   });
 
