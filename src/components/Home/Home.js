@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 // import AddRouteContainer from '../../redux/containers/AddRouteContainer';
 
 // import AddRoute from '../../redux/components/AddRoute'; 
-import Footer from '../../redux/components/Footer';
+import Footer from '../Footer/Footer';
 import { Routes } from '../../app/features/routes/Routes';
 
 
