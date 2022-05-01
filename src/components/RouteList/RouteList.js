@@ -10,13 +10,23 @@ export default function RouteList() {
 
   const mapRoutes = routes.map(route => {
     return (
-      <Link name={route.routeId} to={`${route.routeId}`}>
+      <Link className="text-black bg-white max-w-sm w-full h-24 m-5 rounded-md text-left p-3" name={route.routeId} to={`${route.routeId}`}>
         <Route 
           routeId={route.routeId}
+          className=""
         />
       </Link>
     )
   });
+
+  // const mapRoutes = routes.map(route => {
+  //   return (
+  //       <Route 
+  //         routeId={route.routeId}
+  //       />
+  //   )
+  // });
+
 
   return (
     <div className="bg-slateGray h-screen w-full rounded-3xl">
