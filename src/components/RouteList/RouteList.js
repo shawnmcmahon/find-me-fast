@@ -17,7 +17,8 @@ export default function RouteList() {
 
   return (
     <div className="bg-slateGray h-screen w-full rounded-3xl">
-      <ul>{mapRoutes}</ul>
+      <h2 className="text-left text-black p-6 pl-12">Routes</h2>
+      <ul className="flex flex-col justify-center items-center">{mapRoutes}</ul>
     </div>
   )
 }
