@@ -10,8 +10,6 @@ export const Routes = () => {
 
 
   const mapRoutes = routes.map(route => {
-
-
     return (
       <p key={route.routeId}>Route: {route.routeId}</p>
     )
@@ -19,8 +17,7 @@ export const Routes = () => {
 
   return (
     <div>
-      {mapRoutes}
-      <div>
+      {/* <div>
         <form onSubmit={e => {
           e.preventDefault()
           if (!routeInput.value.trim()) {
@@ -33,7 +30,7 @@ export const Routes = () => {
             Add Route
           </button>
         </form>
-      </div>
+      </div> */}
     </div>
   )
 
