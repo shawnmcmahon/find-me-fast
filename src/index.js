@@ -14,6 +14,7 @@ import { createStore } from 'redux';
 
 import Home from '../src/components/Home/Home';
 import Error from '../src/components/Error/Error';
+import RouteProfile  from './components/RouteProfile/RouteProfile';
 import { store } from './app/store';
 
 
@@ -36,6 +37,7 @@ function AppWithCallbackAfterRender() {
           <Routes> 
             <Route path="/" element={<App />} />
               <Route index element={<Home />} />
+              <Route path=":routeId" element={<RouteProfile />} />
             <Route path="*" element={<Error />} />
           </Routes>
         </Provider>
