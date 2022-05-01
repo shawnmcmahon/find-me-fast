@@ -18,20 +18,6 @@ export const Routes = () => {
 
   return (
     <div>
-      {/* <div>
-        <form onSubmit={e => {
-          e.preventDefault()
-          if (!routeInput.value.trim()) {
-            return
-          }
-          dispatch(addRoute(routeInput.value))
-          routeInput.value = ''}}>
-          <input ref={node => routeInput = node} />
-          <button type="submit">
-            Add Route
-          </button>
-        </form>
-      </div> */}
     </div>
   )
 

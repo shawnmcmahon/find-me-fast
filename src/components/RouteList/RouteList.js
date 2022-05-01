@@ -1,7 +1,7 @@
 import React, { useState } from 'react'; 
 import { useSelector, useDispatch } from 'react-redux';
 import { setRoutes, addRoute, selectRoutes } from '../../app/features/routes/routeSlice';
-
+import { Route } from '../Route/Route';
 
 export default function RouteList() {
   const routes = useSelector(selectRoutes);
@@ -9,7 +9,9 @@ export default function RouteList() {
 
   const mapRoutes = routes.map(route => {
     return (
-      <li key={route.routeId}>Route: {route.routeId}</li>
+      <Route 
+        routeId={route.routeId}
+      />
     )
   });
 
